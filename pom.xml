@@ -19,7 +19,7 @@
                     <configuration>
                         <printSummary>true</printSummary>
                         <suiteXmlFiles>
-                            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                            <suiteXmlFile>testngCE_8-10.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
