@@ -12,7 +12,7 @@ public class PropertiesUtils {
     public static String propFilePath;
 
     public static String getPropertyValue(String key) {
-        propFilePath = System.getProperty("user.dir") + System.getProperty("file.separator") + "config.properties";
+        propFilePath = System.getProperty("user.dir") + System.getProperty("file.separator") + "configData.properties";
         FileInputStream fis;
         try {
             fis = new FileInputStream(propFilePath);
