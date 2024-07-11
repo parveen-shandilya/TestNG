@@ -72,18 +72,17 @@ import CommonMethods.PropertiesUtils;
     public static WebDriver Setup()
     {    
     	 RunEnvironmentSetup();
-    	 ChromeOptions options = new ChromeOptions();
-         options.setBrowserVersion(PropertiesUtils.getPropertyValue("ChromeVersion"));
-         options.addArguments("--remote-allow-origins=*");
-         options.setPageLoadStrategy(PageLoadStrategy.NONE);
-    options.addArguments("--headless");
-    options.addArguments("--window-size=1552x832");
-
-         WebDriver driver = new ChromeDriver(options);
-         driver.manage().window().maximize();
-
-
-    	 return driver;
+		ChromeOptions options = new ChromeOptions();
+		options.setBrowserVersion(PropertiesUtils.getPropertyValue("ChromeVersion"));
+		options.addArguments("--remote-allow-origins=*");
+		options.addArguments("disable-blink-features=AutomationControlled");
+		options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+		options.addArguments("--headless");
+		options.addArguments("--window-size=1552x832");
+		options.addArguments("disable-blink-features=AutomationControlled");
+		WebDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
+		return driver;
         
             
     }
