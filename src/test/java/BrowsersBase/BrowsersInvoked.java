@@ -81,9 +81,6 @@ import CommonMethods.PropertiesUtils;
 
          WebDriver driver = new ChromeDriver(options);
          driver.manage().window().maximize();
-//         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//         driver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(10));
-//         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
 
 
     	 return driver;
@@ -295,13 +292,6 @@ import CommonMethods.PropertiesUtils;
     deleteScreenshots(screenshotDirectory);
     String os = System.getProperty("os.name");
     System.out.println("Operating System: " + os);
-
-    // Get and print browser window dimensions
-    Dimension windowSize = getDriver().manage().window().getSize();
-    System.out.println("Browser Window Dimensions: " + windowSize.getWidth() + "x" + windowSize.getHeight());
-    
-    
-    
     }
     
     private void deleteScreenshots(String directoryPath) {
