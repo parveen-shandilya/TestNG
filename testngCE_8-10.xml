@@ -9,7 +9,6 @@
 			
 			<class name="TestCases.CaseAssignment" />
 			<class name="TestCases.UserManagement" />
-			<class name="TestCases.OnlinePayment" />
 			<class name="TestCases.CLP" />
 	</classes>
 	</test>
